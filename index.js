@@ -1,6 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const Employee = require('./lib/Employee');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const Manager = require('./lib/Manager');
 
 //HTML TEMPLATE
 const generateHTML = ({name, role, id, email, office, github, school,}) =>
@@ -22,13 +25,13 @@ const generateHTML = ({name, role, id, email, office, github, school,}) =>
                 <div class="col-sm-4">
                     <div class="card shadow-sm" style="width:20rem;">
                         <div class="card-header bg-primary p-3">
-                            <h5 class="card-title text-white">${employee.name}</h5>
-                            <h5 class="card-title text-white"> Logo / ${employee.role}</h5>
+                            <h5 class="card-title text-white">${answers.name}</h5>
+                            <h5 class="card-title text-white"> Logo / ${answers.role}</h5>
                         /div>
                         <div class="card-body p-2 bg-light">
-                            <p class="card-text m-1 p-1 bg-white border border-secondary">Employee ID: ${employee.id}</p>
-                            <p class="card-text m-1 p-1 bg-white border border-secondary">Email: ${employee.email}</p>
-                            <p class="card-text m-1 p-1 bg-white border border-secondary">Office/GitHub/School: ${engineer.github}</p>
+                            <p class="card-text m-1 p-1 bg-white border border-secondary">Employee ID: ${answers.id}</p>
+                            <p class="card-text m-1 p-1 bg-white border border-secondary">Email: ${answers.email}</p>
+                            <p class="card-text m-1 p-1 bg-white border border-secondary">Office/GitHub/School: ${answers.github}</p>
                         </div>
                     </div>
                 </div>
@@ -39,9 +42,8 @@ const generateHTML = ({name, role, id, email, office, github, school,}) =>
 </html>`;
 
 
-//USER PROMPTS
-inquirer
-    .prompt([
+//ARRAY OF USER QUESTIONS
+const questions = [
     {
         type: 'input',
         name: 'name',
@@ -62,7 +64,10 @@ inquirer
         name: 'office',
         message: 'What is their office number?',
     },
-    ])
+    ]
+
+//PROMPTS USER WITH QUESTIONS
+inquirer.prompt(questions)
     .then((answers) => {
     const htmlPageContent = generateHTML(answers);
 
