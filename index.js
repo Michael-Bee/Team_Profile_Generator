@@ -3,7 +3,7 @@ const fs = require('fs');
 
 
 //HTML TEMPLATE
-const generateHTML = ({ name, location, github, linkedin }) =>
+const generateHTML = ({name, role, id, email, office, github, school,}) =>
 `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -22,8 +22,8 @@ const generateHTML = ({ name, location, github, linkedin }) =>
                 <div class="col-sm-4">
                     <div class="card shadow-sm" style="width:20rem;">
                         <div class="card-header bg-primary p-3">
-                            <h5 class="card-title text-white">Employee Name</h5>
-                            <h5 class="card-title text-white"> Logo / Employee Role</h5>
+                            <h5 class="card-title text-white">${employee.name}</h5>
+                            <h5 class="card-title text-white"> Logo / ${employee.role}</h5>
                         /div>
                         <div class="card-body p-2 bg-light">
                             <p class="card-text m-1 p-1 bg-white border border-secondary">Employee ID: ${employee.id}</p>
@@ -34,8 +34,7 @@ const generateHTML = ({ name, location, github, linkedin }) =>
                 </div>
             </div>
         </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>`;
 

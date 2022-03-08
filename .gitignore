@@ -1,0 +1,11 @@
+# Logs
+logs
+*.log
+
+# Optional npm cache directory
+.npm
+
+# Node modules
+node_modules
+.DS_Store
+.dist
