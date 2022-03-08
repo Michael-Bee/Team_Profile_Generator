@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+
 const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -47,7 +48,7 @@ const questions = [
     {
         type: 'input',
         name: 'name',
-        message: `What is your manager's name?`,
+        message: `What is the employee's name?`,
     },
     {
         type: 'input',
@@ -61,10 +62,34 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'office',
-        message: 'What is their office number?',
+        name: 'role',
+        message: 'What is their team role?',
     },
-    ]
+]
+
+const managerQuestion = [
+    {
+    type: 'input',
+    name: 'office',
+    message: `What is their office number?`,
+    }
+]
+
+const engineerQuestion = [
+    {
+    type: 'input',
+    name: 'github',
+    message: `What is their GitHub profile name?`,
+    }
+]
+
+const internQuestion = [
+    {
+    type: 'input',
+    name: 'github',
+    message: `What is their GitHub profile name?`,
+    }
+]
 
 //PROMPTS USER WITH QUESTIONS
 inquirer.prompt(questions)
