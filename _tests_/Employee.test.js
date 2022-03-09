@@ -8,19 +8,25 @@ describe("TEST FOR EMPLOYEE CLASS", ()=> {
 
     it("Should have a name property when instantiated with a name parameter", ()=> {
         const name = "Mike";
-        const emp = new Employee(name);
+        const id = 2;
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
         expect(emp.name).toEqual(name);
     });
 
     it("Should have a id property when instantiated with a id parameter", ()=> {
+        const name = "Mike";
         const id = 2;
-        const emp = new Employee(id);
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
         expect(emp.id).toEqual(id);
     });
 
     it("Should have a email property when instantiated with a email parameter", ()=> {
+        const name = "Mike";
+        const id = 2;
         const email = "Mike@mail.com"
-        const emp = new Employee(email);
+        const emp = new Employee(name, id, email);
         expect(emp.email).toEqual(email);
     });
 
