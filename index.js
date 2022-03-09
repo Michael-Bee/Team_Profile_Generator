@@ -45,6 +45,7 @@ const generateHTML = ({name, role, id, email, office, github, school,}) =>
 
 //ARRAY OF USER QUESTIONS
 const questions = [
+    
     {
         type: 'input',
         name: 'name',
@@ -61,7 +62,8 @@ const questions = [
         message: 'What is their email address?',
     },
     {
-        type: 'input',
+        type: 'list',
+        choices: ["Engineer", "Intern"],
         name: 'role',
         message: 'What is their team role?',
     },
@@ -91,9 +93,17 @@ const internQuestion = [
     }
 ]
 
+const employees = []
+
 //PROMPTS USER WITH QUESTIONS
 inquirer.prompt(questions)
     .then((answers) => {
+        console.log(answers);
+        const manager = new Manager(data.name, data.id, data.email, data.role);
+        console.log(manager);
+        employees.push(manager);
+
+
     const htmlPageContent = generateHTML(answers);
 
 //WRITES HTML FILE
