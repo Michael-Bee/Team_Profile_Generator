@@ -1,33 +1,60 @@
-// describe("TEST FOR EMPLOYEE CLASS", ()=> {
-//     it("Should return true, this is sa dummy test",() =>{
-//         expect(true).toBe(true)
-//     })
-// })
+const Employee = require("../lib/Employee");
 
-const Employee = require('../lib/Employee.js')
+describe("TEST FOR EMPLOYEE CLASS", ()=> {
+    it("Should instantiate and create a employee object", ()=> {
+        const emp = new Employee();
+        expect(typeof emp).toBe("object")
+    });
 
-it('Should create an employee instance', () => {
-    const testEmp = new Employee();
-    expect(typeof(testEmp)).toBe("object")
-}) 
+    it("Should have a name property when instantiated with a name parameter", ()=> {
+        const name = "Mike";
+        const emp = new Employee(name);
+        expect(emp.name).toEqual(name);
+    });
 
-it('Should setup a name property when instantiated with a name parameter', () => {
-    const name = "Mike"
-    const testEmp = new Employee(name);
+    it("Should have a id property when instantiated with a id parameter", ()=> {
+        const id = 02;
+        const emp = new Employee(id);
+        expect(emp.id).toEqual(id);
+    });
 
-    expect(testEmp.name).toEqual("Mike")
-}) 
+    it("Should have a email property when instantiated with a email parameter", ()=> {
+        const email = "Mike@mail.com"
+        const emp = new Employee(email);
+        expect(emp.email).toEqual(email);
+    });
 
-test('can setup a id property when instantiated with a id parameter', () => {
-    const id = "10"
-    const testEmp = new Employee(id);
 
-    expect(testEmp.id).toEqual("10")
-}) 
+    //test methods
+    it("Should return the name of the object when getName method is invoked", ()=> {
+        const name = "Mike";
+        const id = 02;
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
+        expect(emp.getName()).toEqual(name)
+    });
 
-test('can setup a email property when instantiated with a email parameter', () => {
-    const email = "mike@gmail.com"
-    const testEmp = new Employee(email);
+    it("Should return the id of the object when getId method is invoked", ()=> {
+        const name = "Mike";
+        const id = 02;
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
+        expect(emp.getId()).toEqual(id)
+    })
 
-    expect(testEmp.email).toEqual("mike@gmail.com")
-}) 
+    it("Should return the email of the object when getEmail method is invoked", ()=> {
+        const name = "Mike";
+        const id = 02;
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
+        expect(emp.getEmail()).toEqual(email)
+    })
+
+    it("Should return 'Employee' when the getRole method is called", ()=> {
+        const name = "Mike";
+        const id = 02;
+        const email = "Mike@mail.com"
+        const emp = new Employee(name, id, email);
+        expect(emp.getRole()).toEqual("Employee")
+    })
+})
