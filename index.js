@@ -62,7 +62,7 @@ const employees = []
 
 //PROMPTS USER WITH QUESTIONS
 function addEmployee(){
-    prompt({
+    inquirer.prompt({
         message: "What do you want to do?",
         type: "list",
         name: "choice",
@@ -70,7 +70,7 @@ function addEmployee(){
     }).then(data => {
         console.log("YOUR CHOICE --- ", data.choice);
         if(data.choice === "Add an employee"){
-            prompt(employeePrompt)
+            inquirer.prompt(employeePrompt)
             .then(data => {
                 console.log("answers for employee --- ", data);
                 if(data.role === "Engineer"){
@@ -103,19 +103,26 @@ function createHTML(){
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
             <title>Team Profile Generator</title>
+            <style>
+                html { font-size: 62.5%; } 
+                body { font-size: 1.4rem; }
+                h1   { font-size: 6.0rem; }
+                h2   { font-size: 2.8rem; }
+                h3   { font-size: 2.0rem; }
+            </style>
         </head>
         <body>
-            <div class="container mw-100  bg-danger">
-                <h1 class="p-5 text-white">My Team</h1> 
+            <div class="container mw-100 mb-5 bg-danger text-center">
+                <h1 class="p-5 text-white"><b>My Team</b></h1> 
             </div>
             <div class="container">
-                <div class="row">
-                    ${employees.map(employee => employee.generateHTMLCard(employee.officeNumber || employee.github || employee.school)).join("\n")}
+                <div class="row justify-content-around">
+                        ${employees.map(employee => employee.generateHTMLCard(employee.office || employee.github || employee.school)).join("\n")}
+                    </div>
                 </div>
-            </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
-    </html>`;
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </body>
+        </html>`;
 
 //WRITES HTML FILE
 fs.writeFileSync("./dist/output.html", html);
@@ -124,7 +131,7 @@ console.log("ALL DONE, check the dist directory for the html created!")
 
 function main(){
     //Start with manager
-    prompt(managerPrompt).then(data => {
+    inquirer.prompt(managerPrompt).then(data => {
         console.log(data);
         const manager = new Manager(data.name, data.id, data.email, data.office);
         employees.push(manager);
