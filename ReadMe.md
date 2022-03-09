@@ -76,14 +76,13 @@ GitHub: https://github.com/Michael-Bee
 
 Please contact with any questions.
 
+---
+---
 
 ## <span id="license">License:</span>
 The MIT License
 
 https://opensource.org/licenses/MIT
-
----
----
 
 Copyright (c) [2022] [Michael Bee]
 
