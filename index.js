@@ -67,6 +67,16 @@ const questions = [
         name: 'role',
         message: 'What is their team role?',
     },
+    {
+        message: (answers)=> `What is the name of the ${answers.role}?`
+    }
+    {
+        message: (answers)=> {
+            if (answers.role === "engineer") 
+                return
+                return
+            }
+    }
 ]
 
 const managerQuestion = [
