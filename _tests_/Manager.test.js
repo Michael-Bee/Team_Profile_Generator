@@ -3,7 +3,7 @@ const Manager = require("../lib/Manager");
 describe("THIS IS TEST FOR Manager CLASS ", ()=> {
     it("should have a officeNumber property when instantiated with the office parameter", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const office = 101;
 
@@ -13,7 +13,7 @@ describe("THIS IS TEST FOR Manager CLASS ", ()=> {
 
     it("Should return the officeNumber property when getOffice method is invoked", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const office = 101;
 
@@ -23,7 +23,7 @@ describe("THIS IS TEST FOR Manager CLASS ", ()=> {
 
     it("Should return 'Manager' when the getRole method is invoked", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const office = 101;
 

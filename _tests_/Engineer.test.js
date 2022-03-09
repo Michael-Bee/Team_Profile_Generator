@@ -3,7 +3,7 @@ const Engineer = require("../lib/Engineer");
 describe("THIS IS TEST FOR ENGINEER CLASS ", ()=> {
     it("should have a github property when instantiated with the github parameter", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const github = "Michael-Bee";
 
@@ -13,7 +13,7 @@ describe("THIS IS TEST FOR ENGINEER CLASS ", ()=> {
 
     it("Should return the github property when getGithub method is invoked", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const github = "Michael-Bee";
 
@@ -23,7 +23,7 @@ describe("THIS IS TEST FOR ENGINEER CLASS ", ()=> {
 
     it("Should return 'Engineer' when the getRole method is invoked", ()=> {
         const name = "Mike";
-        const id = 02;
+        const id = 2;
         const email = "Mike@mail.com";
         const github = "Michael-Bee";
 
