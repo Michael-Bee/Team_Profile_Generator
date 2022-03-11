@@ -1,11 +1,12 @@
 # Team Profile Generator [![The MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
 ---
+---
 
 ## Table of Contents:
 1. [Authors](#authors)
-2. [links](#links)
-3. [Screenshot](#screenshot)
+2. [Links](#links)
+3. [Screenshots](#screenshot)
 4. [Description](#description)
 5. [Technologies](#technologies)
 6. [Installation](#installation)
@@ -26,7 +27,7 @@ Deployed Sample HTML: https://michael-bee.github.io/Team_Profile_Generator/
 
 
 ## <span id="screenshot">Screenshot:</span>
-![Team Profile Generator Demo](demo/Team_Profile_Generator_Demo.gif)
+![Team Profile Generator Screenshot](dist/Team_Profile_Generator_Screenshot.png)
 
 
 ## <span id="description">Description:</span>
@@ -41,16 +42,15 @@ A Node.js command-line application that takes in information about employees on 
 * Node.js
 
 ## <span id="installation">Installation:</span>
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+1. Clone the remote repository from GitHub
+2. Install dependencies: `nmp install`
+3. initiate program: `node index`
 
 
 ## <span id="usage">Usage:</span>
-* How to run the program
-* Step-by-step bullets
-```
-code 
-```
+* Answer questions regarding each team member
+* Once HTML is generated, navigate to the `dist` folder
+* Open `output.html` in web browser
 
 
 ## <span id="contribution">Contribution:</span>
@@ -62,15 +62,13 @@ code
 
 
 ## <span id="testing">Testing:</span>
-* How to run the testing
-* Step-by-step bullets
 ```
-code 
+npm test
 ```
 
 
 ## <span id="contact">Questions:</span>
-Email: Bee.Michael.02@gamil.com
+Email: Bee.Michael.02@gmail.com
 
 GitHub: https://github.com/Michael-Bee
 
@@ -80,7 +78,7 @@ Please contact with any questions.
 ---
 
 ## <span id="license">License:</span>
-The MIT License
+### The MIT License
 
 https://opensource.org/licenses/MIT
 
