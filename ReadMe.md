@@ -29,6 +29,8 @@ Deployed Sample HTML: https://michael-bee.github.io/Team_Profile_Generator/
 ## <span id="screenshot">Screenshot:</span>
 ![Team Profile Generator Screenshot](dist/Team_Profile_Generator_Screenshot.png)
 
+### Team Profile Generator Demo:
+[![Watch the Team Profile Generator Demo](dist/Team_Profile_Generator_Demo.gif)](https://drive.google.com/file/d/16cJWZ_SPpItfv_xWtSoBtU94plmwzZBt/view)
 
 ## <span id="description">Description:</span>
 A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
